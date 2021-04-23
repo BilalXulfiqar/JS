@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var course1 = +prompt("enter eng marks");
+      var course2 = +prompt("enter urdu marks");
+      var course3 = +prompt("enter math marks");
+      var course4 = +prompt("enter Islamiat marks");
+      var course5 = +prompt("enter Science marks");
+      var totalMarks = 500;
+      var marksObtained = course1 + course2 + course3 + course4 + course5;
+      var per = Math.ceil((marksObtained * 100) / totalMarks);
+      console.log(per);
+      switch (true) {
+        case per <= 100 && per >= 90:
+          console.log("A+");
+          break;
+
+        case per < 90 && per >= 75:
+          console.log("A");
+          break;
+
+        case per < 75 && per >= 60:
+          console.log("B");
+          break;
+
+        case per < 60 && per >= 45:
+          console.log("C");
+          break;
+
+        case per < 45 && per >= 30:
+          console.log("D");
+          break;
+
+        case per < 30 && per >= 0:
+          console.log("F");
+          break;
+      }
+    </script>
+  </body>
+</html>

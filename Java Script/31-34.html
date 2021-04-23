@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var name = prompt("Enter your name");
+      var date = +prompt("Enter the date of your birth");
+      var month = +prompt("Enter the month of your birth");
+      var year = +prompt("Enter the year of your birth");
+      console.log("Hello " + name + " Good morning");
+
+      var dob = new Date(year, month, date);
+      console.log("your date of birth in Pakistan Time", dob);
+      //  var currentDate = new Date().getTime();
+      var DOB = new Date(dob).getTime();
+      console.log(DOB);
+      var yearDiff = new Date().getFullYear() - new Date(DOB).getFullYear();
+      console.log("Year :", yearDiff);
+
+      var monthDiff = new Date().getMonth() - new Date(DOB).getMonth();
+      if (monthDiff < 0) {
+        monthDiff = new Date(DOB).getMonth() - new Date().getMonth();
+        console.log("Month :", monthDiff);
+      } else console.log(monthDiff);
+
+      //var dateDiff = new Date().getDate() - new Date(DOB).getMonth();
+      //console.log("Date :", dateDiff);
+
+      var dayDiff = new Date().getDay() - new Date(DOB).getDay();
+      if (dayDiff < 0) {
+        dayDiff = new Date(DOB).getDay() - new Date().getDay();
+        console.log("Day :", dayDiff);
+      } else console.log("Day:", dayDiff);
+
+      var hourDiff = new Date().getHours() - new Date(DOB).getHours();
+      console.log("Hours :", hourDiff);
+
+      var secDiff = new Date().getSeconds() - new Date(DOB).getSeconds();
+      console.log("Seconds :", secDiff);
+
+      var msDiff = new Date().getTime() - new Date(DOB).getTime();
+      var dDiff = msDiff / (1000 * 60 * 60 * 24);
+      console.log("Your age in Days : ", Math.floor(dDiff));
+
+      console.log(
+        "You are " +
+          yearDiff +
+          " Years " +
+          monthDiff +
+          " months " +
+          dayDiff +
+          " Days " +
+          hourDiff +
+          " hours " +
+          secDiff +
+          " Seconds Old"
+      );
+
+      var nextDob = new Date(year + yearDiff, month, date);
+      console.log("Next Birthday is on ", nextDob);
+      var newDay = new Date(nextDob).getTime() - new Date().getTime();
+      newDay = newDay / (1000 * 60 * 60 * 24);
+
+      var newMin = new Date(nextDob).getMinutes() - new Date().getMinutes();
+      if (newMin < 0) {
+        newMin = new Date().getMinutes() - new Date(nextDob).getMinutes();
+      }
+
+      var newSec = new Date(nextDob).getSeconds() - new Date().getSeconds();
+      if (newSec < 0) {
+        newSec = new Date().getSeconds() - new Date(nextDob).getSeconds();
+      }
+      if (
+        new Date(DOB).getMonth() == new Date().getMonth() &&
+        new Date(DOB).getDate() == new Date().getDate()
+      ) {
+        console.log("HappyBirthday You are" + yearDiff + "old");
+      } else
+        console.log(
+          " Next Birthday After " +
+            Math.floor(newDay) +
+            " Days " +
+            Math.floor(newMin) +
+            " minutes " +
+            Math.floor(newSec) +
+            "Seconds"
+        );
+    </script>
+  </body>
+</html>

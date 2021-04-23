@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function captilizeCase() {
+        var str = prompt("Enter the string");
+        str = str.toLocaleLowerCase();
+        str = str.split(" ");
+        console.log(str);
+        for (var i = 0; i < str.length; i++) {
+          str[i] = str[i].charAt(0).toLocaleUpperCase() + str[i].slice(1);
+        }
+        str = str.join(" ");
+        alert(str);
+      }
+
+      captilizeCase();
+    </script>
+  </body>
+</html>

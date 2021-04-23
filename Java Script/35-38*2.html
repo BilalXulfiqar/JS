@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      num = +prompt("Enter the number you want to factorize");
+      console.log(num);
+      var fact = 1;
+      if (num < 0) {
+        alert("no factorial of negative integers");
+      } else if (num == 0) {
+        alert("factorial of 0 is 1");
+      } else factorial(num);
+
+      function factorial(num) {
+        for (var i = 1; i <= num; i++) {
+          fact = fact * i;
+        }
+        alert(fact);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var input = prompt("Enter a string");
+      input = input.toLocaleLowerCase().split(" ");
+      console.log(input);
+
+      for (var i = 0; i < input.length; i++) {
+        input[i] = input[i].charAt(0).toLocaleUpperCase() + input[i].slice(1);
+      }
+      input = input.join(" ");
+      alert(input);
+    </script>
+  </body>
+</html>

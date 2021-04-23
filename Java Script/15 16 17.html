@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var courses = [];
+      var course1 = prompt("Enter your first course");
+      courses.push(course1);
+      var course2 = prompt("Enter your second course");
+      courses.push(course2);
+      var course3 = prompt("Enter your Third course");
+      courses.push(course3);
+      var course4 = prompt("Enter your fourth course");
+      courses.push(course4);
+      var course5 = prompt("Enter your Fifth course");
+      courses.push(course5);
+      alert(courses);
+      var course1Value;
+      course1 = prompt(course1);
+      courses.splice(0, 1, course1);
+      course2 = prompt(course2);
+      courses.splice(1, 1, course2);
+      course3 = prompt(course3);
+      courses.splice(2, 1, course3);
+      course4 = prompt(course4);
+      courses.splice(3, 1, course4);
+      course5 = prompt(course5);
+      courses.splice(4, 1, course5);
+
+      alert(courses);
+    </script>
+  </body>
+</html>

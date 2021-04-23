@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var inPut = +prompt("Enter decimel like 3.4,5.6");
+      inPut = Math.ceil(inPut);
+      console.log(inPut);
+      var text = "This is dummy text";
+      text1 = text.slice(0, inPut);
+      console.log(text1);
+      var store = [];
+      var output;
+      for (var i = 0; i <= inPut; i++) {
+        store.push(text1[i]);
+        console.log(store[i]);
+      }
+
+      console.log(store);
+      store = store.reverse();
+      store = store.join("");
+
+      alert(store);
+    </script>
+  </body>
+</html>

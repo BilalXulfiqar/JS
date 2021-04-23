@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var courses = [];
+      for (var i = 0; i < 5; i++) {
+        courses[i] = prompt("Enter your courses");
+        courses.push(courses[i]);
+        console.log(courses);
+      }
+      alert(courses);
+      for (var i = 0; i < 5; i++) {
+        courses[i] = prompt(courses[i]);
+        courses.splice(i, 1, courses[i]);
+        console.log(courses[i]);
+      }
+      alert(courses);
+    </script>
+  </body>
+</html>
